@@ -8,9 +8,6 @@
 # Java class files
 *.class
 
-# Log Files
-*.log
-
 # generated files
 bin/
 gen/
@@ -32,13 +29,14 @@ proguard/
 .idea/
 out/
 build/
-/*/build/
 
-# Gradle files
-.gradle/
+.gradle
 production/
 
 signing.properties
 
 *~
-
+/fText
+#extras/external_tagsoup/
+/tesstwo
+.DS_Store

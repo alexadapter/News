@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "cn.dream.alextailor"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+//    <!--app id-->
+//    <string name="youku_client_id">43f5c09400090313</string>
+//    <string name="youku_client_secret">a17c13357e2ee570727e21244455053d</string>
+//    <!---->
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            resValue "string", "youku_client_id", "43f5c09400090313"
+            resValue "string", "youku_client_secret", "a17c13357e2ee570727e21244455053d"
+        }
+        debug{
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            resValue "string", "youku_client_id", "43f5c09400090313"
+            resValue "string", "youku_client_secret", "a17c13357e2ee570727e21244455053d"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:design:23.0.1'
+
+    compile project (':request')
+}
